@@ -13,6 +13,8 @@ RUN	echo "http://alpine.rsyslog.com/3.7/stable" >> /etc/apk/repositories \
 	   rsyslog-omrelp \
 	   rsyslog-omstdout \
 	   rsyslog-tls \
+	   postgresql-dev \
+	   libpq \
 	   rsyslog-pgsql \
 	   tzdata
 RUN	adduser -s /bin/ash -D rsyslog rsyslog \
