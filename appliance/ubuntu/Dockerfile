@@ -7,6 +7,7 @@ RUN	apt-get -y update \
 	&& apt-get -y update \
 	&& apt-get -y install libfastjson4 \
 	&& apt-get -y install rsyslog \
+	&& apt-get -y install rsyslog-pgsql \
 	&& rm -r /etc/rsyslog.conf
 ADD	rsyslog.conf /etc/rsyslog.conf
 #VOLUME  /rsyslog-bin
