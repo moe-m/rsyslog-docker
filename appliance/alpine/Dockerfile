@@ -13,10 +13,17 @@ RUN	echo "http://alpine.rsyslog.com/3.7/stable" >> /etc/apk/repositories \
 	   rsyslog-omrelp \
 	   rsyslog-omstdout \
 	   rsyslog-tls \
+	  libpq \
 	   postgresql-dev \
-	   libpq \
 	   rsyslog-pgsql \
 	   tzdata
+RUN apk update
+RUN apk add \
+	libpq \
+	   postgresql-dev \
+	   rsyslog-pgsql \
+	   tzdata
+	
 RUN	adduser -s /bin/ash -D rsyslog rsyslog \
 	&& echo "rsyslog ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 VOLUME	/config /work /logs
