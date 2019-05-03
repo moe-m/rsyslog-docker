@@ -11,4 +11,5 @@ RUN	echo "http://alpine.rsyslog.com/3.7/stable" >> /etc/apk/repositories \
 	   rsyslog-mmjsonparse \
 	   rsyslog-mmutf8fix \
 	   rsyslog-omrelp \
-	   rsyslog-omstdout
+	   rsyslog-omstdout \
+	   rsyslog-pgsql
